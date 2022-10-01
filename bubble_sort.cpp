@@ -20,6 +20,23 @@ void printArray(int arr[], int size)
 		cout << arr[i] << " ";
 	cout << endl;
 }
+//C++ code for recursive bubble sort algorithm
+
+void recurbubblesort(int arr[], int n)
+{
+	if (n == 0 || n == 1)
+	{
+		return;
+	}
+	for (int i = 0; i < n - 1; i++)
+	{
+		if (arr[i] > arr[i + 1])
+		{
+			swap(arr[i], arr[i + 1]);
+		}
+	}
+	bubblesort(arr, n - 1);
+}
 
 // Driver code
 int main()
